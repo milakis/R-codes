@@ -1,0 +1,23 @@
+\documentclass[convert]{standalone}
+%\usepackage{caption} 
+%\captionsetup[table]{skip=10pt}
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{lllllll}
+\cline{2-7}
+& \multicolumn{3}{c}{Sparse model} & \multicolumn{3}{c}{Abundant model} \\
+\cline{2-7}
+& OLS & Ridge & Lasso & OLS & Ridge & Lasso \\ 
+\hline 
+\multicolumn{7}{c}{Panel A: no correlation ($p=\alpha=0$)}\\
+MSE & 1.138 & 1.137 & 1.081 & 6.561 & 6.606 & 6.639 \\ 
+variables & 50 & 50 & 30.8 & 50 & 50 & 44.5 \\ 
+\multicolumn{7}{c}{Panel B: cross-correlation ($p=0.6, \alpha=0$)}\\
+MSE & 1.226 & 1.104 & 1.071 & 8.914 & 8.925 & 8.936 \\ 
+variables & 50 & 50 & 29.9 & 50 & 50 & 42 \\ 
+\multicolumn{7}{c}{Panel C: serial correlation ($p=0.6, \alpha=0.6$)}\\
+MSE & 1.182 & 1.094 & 1.031 & 7.467 & 7.470 & 7.488  \\ 
+variables & 50 & 50 & 29.9 & 50 & 50 & 42.3 \\
+\hline
+\end{tabular}
+\end{document}
